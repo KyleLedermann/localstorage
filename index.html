@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>MEMOMENTS</title>
+ <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+	
+	document.addEventListener("deviceready", onDeviceReady,  false);
+	
+	function on DeviceReady() {}
+	
+	function storeName(){
+		var myName = document.getElementById("name").value;
+		window.localStorage.setItem("name", myName);
+		
+		var result = document.getElementById("result");
+		result.innerHTML = "your name is" + window.localStorage.getItem("name");
+		return false;
+		}
+		</script>
+		</head>
+		<body>
+		<form>
+		<p>What is your name?<br />
+		<input type='text' id='name' onBlur='storeName()'></p>
+		</form>
+		
+		<div id='result'></div>
+		</body>
+		</html>
